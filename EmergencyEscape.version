@@ -1,5 +1,5 @@
 {
-    "masterVersionFile":"https://raw.githubusercontent.com/Alaricdragon/Abyssal_XO/master/AbyssalXO.version",
+    "masterVersionFile":"https://raw.githubusercontent.com/Alaricdragon/Emergency_Escape/master/AbyssalXO.version",
     "modName":"Abyssal XO",
     #"modThreadId":,
     "modVersion":
@@ -9,6 +9,6 @@
         "patch":"0"
     },
 	"starsectorVersion":"0.98a-RC5",
-	"directDownloadURL":"https://github.com/Alaricdragon/Abyssal_XO/archive/refs/heads/master.zip",
-	"changelogURL":"https://raw.githubusercontent.com/Alaricdragon/Abyssal_XO/master/changelog.text"
+	"directDownloadURL":"https://github.com/Alaricdragon/Emergency_Escape/archive/refs/heads/master.zip",
+	"changelogURL":"https://raw.githubusercontent.com/Alaricdragon/Emergency_Escape/master/changelog.text"
 }
