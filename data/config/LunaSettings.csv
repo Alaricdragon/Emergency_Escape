@@ -1,0 +1,3 @@
+fieldID,fieldName,fieldType,defaultValue,secondaryValue,fieldDescription,minValue,maxValue,tab
+Header_MainSettings,,Header,Settings,,,,,Fetures
+maxShips,Max number of ships that can use Emergency Escape System per combat,Int,1,,,1,100,Fetures

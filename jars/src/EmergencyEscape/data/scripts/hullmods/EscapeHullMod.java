@@ -14,7 +14,7 @@ import org.lwjgl.util.vector.Vector2f;
 import java.awt.*;
 
 public class EscapeHullMod  extends BaseHullMod {
-    public static final int maxJumps = Global.getSettings().getInt("EmergencyEscape_MaxJumps");
+    public static int maxJumps = Global.getSettings().getInt("EmergencyEscape_MaxJumps");
     public static float CR_LOSS_MULT_FOR_EMERGENCY_DIVE = 1f;
     public static final float chargeUpMulti = 2f;//default charge up time if the ship does not have a phase jump.
 
@@ -33,7 +33,9 @@ public class EscapeHullMod  extends BaseHullMod {
 
             if (!emergencyDive) {
                 String key = "EmergencyEscape_phaseAnchor_canDive";
-                boolean canDive = !Global.getCombatEngine().getCustomData().containsKey(key);
+                //boolean canDive = !Global.getCombatEngine().getCustomData().containsKey(key);
+                int dives = Global.getCombatEngine().getCustomData().containsKey(key) ? (int) Global.getCombatEngine().getCustomData().get(key) : 0;
+                boolean canDive = dives < maxJumps;
                 float depCost = 0f;
                 if (ship.getFleetMember() != null) {
                     depCost = ship.getFleetMember().getDeployCost();
@@ -51,7 +53,7 @@ public class EscapeHullMod  extends BaseHullMod {
                         //ship.getFleetMember().getRepairTracker().setCR(ship.getFleetMember().getRepairTracker().getBaseCR() + crLoss);
                     }
                     emergencyDive = true;
-                    Global.getCombatEngine().getCustomData().put(key, true);
+                    Global.getCombatEngine().getCustomData().put(key, dives+1);
 
                     if (!ship.isPhased()) {
                         Global.getSoundPlayer().playSound("system_phase_cloak_activate", 1f, 1f, ship.getLocation(), ship.getVelocity());

@@ -1,4 +1,5 @@
 package EmergencyEscape.data.scripts;
+import EmergencyEscape.data.scripts.lunaSettings.StoredSettings;
 import com.fs.starfarer.api.BaseModPlugin;
 
 public class Plugin extends BaseModPlugin {
@@ -9,6 +10,8 @@ public class Plugin extends BaseModPlugin {
     @Override
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
+        StoredSettings.attemptEnableLunalib();
+        StoredSettings.getSettings();
     }
 
     @Override
