@@ -1,0 +1,6 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+Emergency Escape System,PhaseEscapeSystem,3,0,Common,special,Special,7500,FALSE,,,4,8,12,20,EmergencyEscape.data.scripts.hullmods.EscapeHullMod,"When suffering critical damage that would otherwise destroy or disable the ship, able to initiate an emergency dive deep into p-space. The ship counts as retreated and will emerge into normal space when combat is over, suffering an additional penalty to combat readiness equal to %s its deployment cost. The ship must have enough combat readiness to cover this cost to initiate the dive.
+
+Due to the immense distortions in p-space caused by such a maneuver, only %s ship per battle - regardless of which side it's on - is able to perform it.
+
+As this runs at a compleatly diffrent fequancy then a phase anchor, this dive is not prevented by, or prevents a phase anchor emergancy dive",Allows for the emergency dive maneuver.,,graphics/hullmods/phase_anchor.png

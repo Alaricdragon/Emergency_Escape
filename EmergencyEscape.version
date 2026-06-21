@@ -1,0 +1,14 @@
+{
+    "masterVersionFile":"https://raw.githubusercontent.com/Alaricdragon/Abyssal_XO/master/AbyssalXO.version",
+    "modName":"Abyssal XO",
+    #"modThreadId":,
+    "modVersion":
+    {
+        "major":0,
+        "minor":1,
+        "patch":"0"
+    },
+	"starsectorVersion":"0.98a-RC5",
+	"directDownloadURL":"https://github.com/Alaricdragon/Abyssal_XO/archive/refs/heads/master.zip",
+	"changelogURL":"https://raw.githubusercontent.com/Alaricdragon/Abyssal_XO/master/changelog.text"
+}

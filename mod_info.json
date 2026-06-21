@@ -1,0 +1,12 @@
+{
+	"id":"emergency_escape", # internal id
+	"name":"Emergency Escape", # displayed to the player
+	"author":"Alaricdragon",
+	"version":"0.1.0",
+	"description":"Phase Anchor, but for all ships =)",
+	"gameVersion":"0.98a-RC5",
+	"dependencies": [
+	],
+	"jars":["jars/EmergencyEscape.jar"],
+	"modPlugin":"EmergencyEscape.data.scripts.Plugin"
+}
