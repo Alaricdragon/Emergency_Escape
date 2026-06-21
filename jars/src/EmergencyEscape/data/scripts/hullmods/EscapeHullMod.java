@@ -16,6 +16,7 @@ import java.awt.*;
 public class EscapeHullMod  extends BaseHullMod {
     public static final int maxJumps = Global.getSettings().getInt("EmergencyEscape_MaxJumps");
     public static float CR_LOSS_MULT_FOR_EMERGENCY_DIVE = 1f;
+    public static final float chargeUpMulti = 2f;//default charge up time if the ship does not have a phase jump.
 
     public static class EscapeEmergencyScript implements AdvanceableListener, HullDamageAboutToBeTakenListener {
         public ShipAPI ship;
@@ -89,7 +90,7 @@ public class EscapeHullMod  extends BaseHullMod {
                 ship.setRetreating(true, false);
 
                 ship.blockCommandForOneFrame(ShipCommand.USE_SYSTEM);
-                float chargeUp = 0.33f;
+                float chargeUp = chargeUpMulti;
                 if (ship.getPhaseCloak() != null) chargeUp = ship.getPhaseCloak().getChargeUpDur();
                 diveProgress += amount * chargeUp;//ship.getPhaseCloak().getChargeUpDur();
                 float curr = ship.getExtraAlphaMult();
